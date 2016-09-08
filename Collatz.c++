@@ -12,7 +12,8 @@
 #include <iostream> // endl, istream, ostream
 
 #include "Collatz.h"
-
+#define ENABLE_OPTIMIZATION
+int cycles[1000000] = {0};
 using namespace std;
 
 // ------------
@@ -24,6 +25,29 @@ bool collatz_read(istream &r, int &i, int &j) {
     return false;
   r >> j;
   return true;
+}
+
+// ------------
+// check_cache
+// ------------
+
+int check_cache (int n) {
+  int c = 1;
+  int val = n;
+  while (n > 1) {
+    //printf("%d\n", cycles[n]);
+    if (n < 1000000 && cycles[n] != 0){
+	cycles[val] = c - 1 + cycles[n];
+	return cycles[val];
+    }
+    else if ((n % 2) == 0)
+      n = (n / 2);
+    else
+      n = (3 * n) + 1;
+    ++c;
+  }
+  cycles[val] = c;
+  return c;
 }
 
 // ------------
@@ -56,10 +80,15 @@ int collatz_eval(int i, int j) {
     upper = j;
     lower = i;
   }
+  int thisLen;
   for (; lower <= upper; lower++) {
-    int thisLen = cycle_length(lower);
-    if (thisLen > maxLen) {
-      maxLen = thisLen;
+  	#ifdef ENABLE_OPTIMIZATION
+    		thisLen = check_cache(lower);
+    	#else
+    		thisLen = cycle_length(lower);
+    	#endif
+ 	if (thisLen > maxLen) {
+     		maxLen = thisLen;
     }
   }
   return maxLen;
