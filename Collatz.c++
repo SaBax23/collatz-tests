@@ -35,7 +35,6 @@ int check_cache (int n) {
   int c = 1;
   int val = n;
   while (n > 1) {
-    //printf("%d\n", cycles[n]);
     if (n < 1000000 && cycles[n] != 0){
 	cycles[val] = c - 1 + cycles[n];
 	return cycles[val];
