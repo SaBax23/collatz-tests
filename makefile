@@ -9,13 +9,12 @@ FILES :=                              \
     RunCollatz.in                     \
     RunCollatz.out                    \
     TestCollatz.c++                   \
-    TestCollatz.out
-
-# uncomment these:
-    #collatz-tests/EID-RunCollatz.in   \
-    #collatz-tests/EID-RunCollatz.out  \
-    #collatz-tests/EID-TestCollatz.c++ \
-    #collatz-tests/EID-TestCollatz.out \
+    TestCollatz.out                   \
+    UVaCollatz.c++                    \
+    collatz-tests/seb3334-RunCollatz.in    \
+    collatz-tests/seb3334-RunCollatz.out   \
+    collatz-tests/seb3334-TestCollatz.c++  \
+    collatz-tests/seb3334-TestCollatz.out  \
 
 ifeq ($(shell uname), Darwin)                                        # Apple
     CXX          := g++
@@ -89,7 +88,10 @@ RunCollatz: Collatz.h Collatz.c++ RunCollatz.c++
 RunCollatz.tmp: RunCollatz
 	./RunCollatz < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.tmp RunCollatz.out
-
+UVaCollatz.c++: Collatz.h Collatz.c++ RunCollatz.c++
+	cat Collatz.h Collatz.c++ RunCollatz.c++ \
+	| sed -n "/^#include \"Collatz\\.h\"$\/!p" \
+	> UVaCollatz.c++
 TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Collatz.c++ TestCollatz.c++ -o TestCollatz $(LDFLAGS)
 	-$(CLANG-CHECK) -extra-arg=-std=c++11          TestCollatz.c++ --
@@ -139,10 +141,10 @@ config:
 	git config -l
 
 format:
-	clang-format -i Collatz.c++
-	clang-format -i Collatz.h
-	clang-format -i RunCollatz.c++
-	clang-format -i TestCollatz.c++
+	$(CLANG-FORMAT) -i Collatz.c++
+	$(CLANG-FORMAT) -i Collatz.h
+	$(CLANG-FORMAT) -i RunCollatz.c++
+	$(CLANG-FORMAT) -i TestCollatz.c++
 
 status:
 	make clean
