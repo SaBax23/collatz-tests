@@ -1,0 +1,54 @@
+commit 5ee59451ebbd0b9ee0ab35a857394f51cc273af7
+Merge: 3ee4d03 df5d49a
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 17:35:14 2016 -0500
+
+    Merge branch 'dev' of https://github.com/SaBax23/p1 into dev
+
+commit 3ee4d03d4b8dcc0fe35ff753752aa6f067882640
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 17:31:58 2016 -0500
+
+    remove extra files
+
+commit df5d49a493d99dcbd716a41ebfbb972abc704e3f
+Author: SaBax23 <Sarah.Baxter@utexas.edu>
+Date:   Thu Sep 8 17:21:29 2016 -0500
+
+    Delete TestCollatz (iMacG's conflicted copy 2016-09-05).tmp
+
+commit e593a6117000a284b8053ea5530de357ea87ce41
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 17:17:23 2016 -0500
+
+    remove untracked files
+
+commit 3a06e425742bfcc49a7077796a85229f6ac2cff6
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 17:00:23 2016 -0500
+
+    working simple solution
+
+commit 4abdc35d0ad7f7936a094b7553a03ce91cb7f2d0
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 01:26:11 2016 -0500
+
+    implemented dummy solution
+
+commit 894f0a50dc79aa571a0add8d71544c0331d1b91e
+Author: Sarah Baxter <Sarah@Sarahs-MacBook-Pro.local>
+Date:   Thu Sep 8 00:24:29 2016 -0500
+
+    adding travis.yml
+
+commit ac5e19f4029da4fdb761377d02223e0868d93f2c
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Tue Sep 6 16:18:13 2016 -0500
+
+    adding project files
+
+commit 1579292c88d12867680efe05544a47c53af2d8c5
+Author: SaBax23 <Sarah.Baxter@utexas.edu>
+Date:   Tue Sep 6 15:37:22 2016 -0500
+
+    Initial commit
