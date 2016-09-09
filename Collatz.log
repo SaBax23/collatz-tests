@@ -1,3 +1,27 @@
+commit 3c3886a7d06c996706ba297939b9171b146878b2
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 18:50:49 2016 -0500
+
+    working cache optimization
+
+commit 793cba688903b9ad1743aac6642877833606eef7
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 18:44:10 2016 -0500
+
+    working lazy cache implemented
+
+commit 6c107478b84ca8927d22d956eae3964f18d3b941
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 18:33:13 2016 -0500
+
+    initial working lazy cache implemented
+
+commit 03da32018b10e4f605d144e492b811750809c4ba
+Author: Sarah Baxter <seb9000@sbcglobal.net>
+Date:   Thu Sep 8 17:40:56 2016 -0500
+
+    adding html and Collatz.log
+
 commit 5ee59451ebbd0b9ee0ab35a857394f51cc273af7
 Merge: 3ee4d03 df5d49a
 Author: Sarah Baxter <seb9000@sbcglobal.net>

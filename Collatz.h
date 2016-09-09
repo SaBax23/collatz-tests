@@ -64,4 +64,24 @@ void collatz_print(ostream &w, int i, int j, int v);
  */
 void collatz_solve(istream &r, ostream &w);
 
+// ------------
+// cycle_length
+// ------------
+
+/**
+ * @param n the value whose cycle length is to be calculated
+ * @return the cycle length of n
+ */
+int cycle_length(int n);
+
+// ------------
+// check_cache
+// ------------
+
+ /**
+ * @param n the value whose cycle length is to be calculated
+ * @return the cycle length of n
+ */
+int check_cache(int n);
+
 #endif // Collatz_h
